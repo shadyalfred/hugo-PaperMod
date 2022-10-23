@@ -399,3 +399,16 @@ img.in-text {
     display: inline;
     margin: auto;
 }
+
+[dir="rtl"] .footnotes p:has(a + a) {
+    display: flex;
+}
+
+[dir="rtl"] .footnotes p:has(a + a) a {
+    direction: ltr;
+}
+
+[dir="rtl"] .footnotes p:has(a + a) a.footnote-backref {
+    height: fit-content;
+    align-self: end;
+}
