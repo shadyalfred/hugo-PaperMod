@@ -1,11 +1,7 @@
 {{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
-    {{- if site.Params.languagedirection }}
-        {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2، 2006" site.Params.DateFormat)))) }}
-    {{- else }}
-        {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
-    {{- end }}
+        {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (time.Format (default "January 2, 2006" site.Params.DateFormat) .Date))) }}
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
