@@ -1,5 +1,7 @@
 {{- define "main" }}
 
+<h1>{{- time.Format "2 January 2006" .Date}}</h1>
+
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
