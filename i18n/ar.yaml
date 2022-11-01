@@ -13,7 +13,7 @@
     other: "دقائق {{ .Count }}"
 
 - id: toc
-  translation: "فهرس المحتوى"
+  translation: "الفهرس"
 
 - id: translations
   translation: "ترجمات أخرى"
