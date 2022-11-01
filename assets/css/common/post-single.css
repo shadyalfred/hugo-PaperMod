@@ -400,6 +400,10 @@ img.in-text {
     margin: auto;
 }
 
+[dir="rtl"] .post-title {
+    margin-bottom: 10px;
+}
+
 [dir="rtl"] .footnotes p:has(a + a) {
     display: flex;
 }
